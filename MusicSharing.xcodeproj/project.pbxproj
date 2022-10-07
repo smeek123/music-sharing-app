@@ -11,6 +11,11 @@
 		D60B6E0228F0CEA50090E98D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E0128F0CEA50090E98D /* ContentView.swift */; };
 		D60B6E0428F0CEB50090E98D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60B6E0328F0CEB50090E98D /* Assets.xcassets */; };
 		D60B6E0728F0CEB50090E98D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60B6E0628F0CEB50090E98D /* Preview Assets.xcassets */; };
+		D60B6E0F28F0D7CD0090E98D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E0E28F0D7CD0090E98D /* HomeView.swift */; };
+		D60B6E1128F0DE7B0090E98D /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E1028F0DE7B0090E98D /* ChartsView.swift */; };
+		D60B6E1328F0DEA20090E98D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E1228F0DEA20090E98D /* SearchView.swift */; };
+		D60B6E1528F0DECF0090E98D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E1428F0DECF0090E98D /* FavoritesView.swift */; };
+		D60B6E1728F0DEED0090E98D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E1628F0DEED0090E98D /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		D60B6E0128F0CEA50090E98D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D60B6E0328F0CEB50090E98D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60B6E0628F0CEB50090E98D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D60B6E0E28F0D7CD0090E98D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D60B6E1028F0DE7B0090E98D /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		D60B6E1228F0DEA20090E98D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		D60B6E1428F0DECF0090E98D /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		D60B6E1628F0DEED0090E98D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				D60B6DFF28F0CEA50090E98D /* MusicSharingApp.swift */,
-				D60B6E0128F0CEA50090E98D /* ContentView.swift */,
+				D60B6E0D28F0D75B0090E98D /* Views */,
 				D60B6E0328F0CEB50090E98D /* Assets.xcassets */,
 				D60B6E0528F0CEB50090E98D /* Preview Content */,
 			);
@@ -65,6 +75,19 @@
 				D60B6E0628F0CEB50090E98D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D60B6E0D28F0D75B0090E98D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D60B6E0128F0CEA50090E98D /* ContentView.swift */,
+				D60B6E0E28F0D7CD0090E98D /* HomeView.swift */,
+				D60B6E1028F0DE7B0090E98D /* ChartsView.swift */,
+				D60B6E1228F0DEA20090E98D /* SearchView.swift */,
+				D60B6E1428F0DECF0090E98D /* FavoritesView.swift */,
+				D60B6E1628F0DEED0090E98D /* ProfileView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60B6E1328F0DEA20090E98D /* SearchView.swift in Sources */,
+				D60B6E0F28F0D7CD0090E98D /* HomeView.swift in Sources */,
+				D60B6E1528F0DECF0090E98D /* FavoritesView.swift in Sources */,
 				D60B6E0228F0CEA50090E98D /* ContentView.swift in Sources */,
 				D60B6E0028F0CEA50090E98D /* MusicSharingApp.swift in Sources */,
+				D60B6E1728F0DEED0090E98D /* ProfileView.swift in Sources */,
+				D60B6E1128F0DE7B0090E98D /* ChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
