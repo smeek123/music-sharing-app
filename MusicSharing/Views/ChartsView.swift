@@ -9,24 +9,47 @@ import SwiftUI
 
 struct ChartsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
+        VStack {
+            List {
+                ForEach(1..<16) { index in
+                    HStack(alignment: .center) {
+                        Text("\(index). ")
                         
-                    } label: {
-                        Image(systemName: "bell")
-                    }
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
+                        Rectangle()
+                            .foregroundColor(.primary)
+                            .frame(width: 50, height: 50)
+                            .padding(.horizontal, 8)
                         
-                    } label: {
-                        Image(systemName: "message")
+                        VStack(alignment: .leading) {
+                            Text("Song Name")
+                                .foregroundColor(.primary)
+                                .font(.headline)
+                            Text("Artist Name")
+                                .foregroundColor(.secondary)
+                                .font(.callout)
+                        }
                     }
                 }
             }
+            .listStyle(.plain)
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "bell")
+                }
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "message")
+                }
+            }
+        }
     }
 }
 
