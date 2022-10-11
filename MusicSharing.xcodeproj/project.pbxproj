@@ -19,6 +19,7 @@
 		D60B6E1A28F3A78B0090E98D /* SpotifyAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E1928F3A78B0090E98D /* SpotifyAuthViewModel.swift */; };
 		D60B6E1E28F4AB3C0090E98D /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E1D28F4AB3C0090E98D /* Extentions.swift */; };
 		D60B6E2028F4ABE20090E98D /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E1F28F4ABE20090E98D /* AuthResponse.swift */; };
+		D60B6E2228F4EF130090E98D /* StreamingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B6E2128F4EF130090E98D /* StreamingProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D60B6E1928F3A78B0090E98D /* SpotifyAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthViewModel.swift; sourceTree = "<group>"; };
 		D60B6E1D28F4AB3C0090E98D /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		D60B6E1F28F4ABE20090E98D /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		D60B6E2128F4EF130090E98D /* StreamingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				D60B6E1228F0DEA20090E98D /* SearchView.swift */,
 				D60B6E1428F0DECF0090E98D /* FavoritesView.swift */,
 				D60B6E1628F0DEED0090E98D /* ProfileView.swift */,
+				D60B6E2128F4EF130090E98D /* StreamingProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				D60B6E1328F0DEA20090E98D /* SearchView.swift in Sources */,
 				D60B6E1A28F3A78B0090E98D /* SpotifyAuthViewModel.swift in Sources */,
+				D60B6E2228F4EF130090E98D /* StreamingProfileView.swift in Sources */,
 				D60B6E0F28F0D7CD0090E98D /* HomeView.swift in Sources */,
 				D60B6E1528F0DECF0090E98D /* FavoritesView.swift in Sources */,
 				D60B6E0228F0CEA50090E98D /* ContentView.swift in Sources */,
