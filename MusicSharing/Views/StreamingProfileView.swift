@@ -10,7 +10,9 @@ import SwiftUI
 struct StreamingProfileView: View {
     var body: some View {
         NavigationView {
-            <#code#>
+            VStack {
+                
+            }
         }
     }
 }

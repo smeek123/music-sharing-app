@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var selection: Int = 0
+    @Namespace private var pickerTabs
     
     var body: some View {
         //Profile pic should look like an album artwork
@@ -104,57 +105,101 @@ struct ProfileView: View {
                         Spacer()
                         
                         Button {
-                            selection = 0
+                            withAnimation(.linear) {
+                                selection = 0
+                            }
                         } label: {
-                            Image(systemName: "camera.fill")
-                                .padding(10)
-                                .padding(.horizontal, 10)
-                                .foregroundColor(.primary)
-                                .font(.title3)
-                                .background(selection == 0 ? Color.blue : Color(UIColor.secondarySystemBackground))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                            ZStack {
+                                if selection == 0 {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(.blue )
+                                        .matchedGeometryEffect(id: "tabs", in: pickerTabs)
+                                } else {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(Color(UIColor.secondarySystemBackground))
+                                }
+                                
+                                Image(systemName: "camera.fill")
+                                    .foregroundColor(.primary)
+                                    .font(.title3)
+                                    .padding(10)
+                                    .padding(.horizontal, 10)
+                            }
                         }
                         
                         Spacer()
                         
                         Button {
-                            selection = 1
+                            withAnimation(.linear) {
+                                selection = 1
+                            }
                         } label: {
-                            Image(systemName: "bookmark.fill")
-                                .foregroundColor(.primary)
-                                .font(.title3)
-                                .padding(10)
-                                .padding(.horizontal, 10)
-                                .background(selection == 1 ? Color.blue : Color(UIColor.secondarySystemBackground))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                            ZStack {
+                                if selection == 1 {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(.blue )
+                                        .matchedGeometryEffect(id: "tabs", in: pickerTabs)
+                                } else {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(Color(UIColor.secondarySystemBackground))
+                                }
+                                
+                                Image(systemName: "bookmark.fill")
+                                    .foregroundColor(.primary)
+                                    .font(.title3)
+                                    .padding(10)
+                                    .padding(.horizontal, 10)
+                            }
                         }
                         
                         Spacer()
                         
                         Button {
-                            selection = 2
+                            withAnimation(.linear) {
+                                selection = 2
+                            }
                         } label: {
-                            Image(systemName: "headphones")
-                                .foregroundColor(.primary)
-                                .font(.title3)
-                                .padding(10)
-                                .padding(.horizontal, 10)
-                                .background(selection == 2 ? Color.blue : Color(UIColor.secondarySystemBackground))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                            ZStack {
+                                if selection == 2 {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(.blue )
+                                        .matchedGeometryEffect(id: "tabs", in: pickerTabs)
+                                } else {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(Color(UIColor.secondarySystemBackground))
+                                }
+                                
+                                Image(systemName: "headphones")
+                                    .foregroundColor(.primary)
+                                    .font(.title3)
+                                    .padding(10)
+                                    .padding(.horizontal, 10)
+                            }
                         }
                         
                         Spacer()
                         
                         Button {
-                            selection = 3
+                            withAnimation(.linear) {
+                                selection = 3
+                            }
                         } label: {
-                            Image(systemName: "person.2.fill")
-                                .foregroundColor(.primary)
-                                .font(.title3)
-                                .padding(10)
-                                .padding(.horizontal, 10)
-                                .background(selection == 3 ? Color.blue : Color(UIColor.secondarySystemBackground))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                            ZStack {
+                                if selection == 3 {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(.blue )
+                                        .matchedGeometryEffect(id: "tabs", in: pickerTabs)
+                                } else {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(Color(UIColor.secondarySystemBackground))
+                                }
+                                
+                                Image(systemName: "person.2.fill")
+                                    .foregroundColor(.primary)
+                                    .font(.title3)
+                                    .padding(10)
+                                    .padding(.horizontal, 10)
+                            }
                         }
                         
                         Spacer()
