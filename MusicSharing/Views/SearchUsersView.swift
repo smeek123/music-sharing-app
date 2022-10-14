@@ -35,8 +35,7 @@ struct SearchUsersView: View {
                             
                             Spacer()
                         }
-                        .padding(.vertical, 12)
-                        .padding(.horizontal, 25)
+                        .padding(25)
                         
                         RoundedRectangle(cornerRadius: 15)
                             .foregroundColor(Color.black.opacity(0.25))

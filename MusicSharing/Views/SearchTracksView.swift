@@ -31,6 +31,7 @@ struct SearchTracksView: View {
                         .foregroundColor(Color.black.opacity(0.25))
                         .frame(width: UIScreen.main.bounds.width * 0.95, height: UIScreen.main.bounds.width * 0.45)
                 }
+                .padding(.vertical, 10)
                 
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(1..<15, id: \.self) { item in
@@ -41,7 +42,7 @@ struct SearchTracksView: View {
                             
                             VStack {
                                 HStack {
-                                    Text("Zoo York")
+                                    Text("Chill")
                                         .foregroundColor(.primary)
                                         .font(.title3)
                                         .bold()
@@ -52,8 +53,7 @@ struct SearchTracksView: View {
                                 
                                 Spacer()
                             }
-                            .padding(.vertical, 12)
-                            .padding(.horizontal, 25)
+                            .padding(25)
                             
                             RoundedRectangle(cornerRadius: 15)
                                 .foregroundColor(Color.black.opacity(0.25))
