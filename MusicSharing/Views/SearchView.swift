@@ -40,67 +40,74 @@ struct SearchView: View {
                 .padding(.horizontal)
                 .padding(.vertical, 10)
                 
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        withAnimation(.linear) {
+                            selection = 0
+                            prompt = "Search by username..."
+                        }
+                    } label: {
+                        ZStack {
+                            if selection == 0 {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .foregroundColor(.blue )
+                                    .matchedGeometryEffect(id: "tabs", in: pickerTabs)
+                            } else {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .foregroundColor(Color(UIColor.secondarySystemBackground))
+                            }
+                            
+                            Label("People", systemImage: "person.2.fill")
+                                .foregroundColor(.primary)
+                                .font(.caption)
+                                .padding(5)
+                                .padding(.horizontal, 10)
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        withAnimation(.linear) {
+                            selection = 1
+                            prompt = "Search by track title..."
+                        }
+                    } label: {
+                        ZStack {
+                            if selection == 1 {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .foregroundColor(.blue )
+                                    .matchedGeometryEffect(id: "tabs", in: pickerTabs)
+                            } else {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .foregroundColor(Color(UIColor.secondarySystemBackground))
+                            }
+                            
+                            Label("Music", systemImage: "headphones")
+                                .foregroundColor(.primary)
+                                .font(.caption)
+                                .padding(5)
+                                .padding(.horizontal, 10)
+                        }
+                    }
+                    
+                    Spacer()
+                }
+                .padding()
+                .frame(maxHeight: 50)
+                .background(Color(UIColor.secondarySystemBackground))
+                .clipShape(Capsule())
+                .padding(.horizontal)
+                
                 ScrollView(showsIndicators: false) {
                     VStack {
-                        HStack {
-                            Spacer()
-                            
-                            Button {
-                                withAnimation(.linear) {
-                                    selection = 0
-                                    prompt = "Search by username..."
-                                }
-                            } label: {
-                                ZStack {
-                                    if selection == 0 {
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .foregroundColor(.blue )
-                                            .matchedGeometryEffect(id: "tabs", in: pickerTabs)
-                                    } else {
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .foregroundColor(Color(UIColor.secondarySystemBackground))
-                                    }
-                                    
-                                    Label("People", systemImage: "person.2.fill")
-                                        .foregroundColor(.primary)
-                                        .font(.caption)
-                                        .padding(5)
-                                        .padding(.horizontal, 10)
-                                }
-                            }
-                            
-                            Spacer()
-                            
-                            Button {
-                                withAnimation(.linear) {
-                                    selection = 1
-                                    prompt = "Search by track title..."
-                                }
-                            } label: {
-                                ZStack {
-                                    if selection == 1 {
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .foregroundColor(.blue )
-                                            .matchedGeometryEffect(id: "tabs", in: pickerTabs)
-                                    } else {
-                                        RoundedRectangle(cornerRadius: 15)
-                                            .foregroundColor(Color(UIColor.secondarySystemBackground))
-                                    }
-                                    
-                                    Label("Music", systemImage: "headphones")
-                                        .foregroundColor(.primary)
-                                        .font(.caption)
-                                        .padding(5)
-                                        .padding(.horizontal, 10)
-                                }
-                            }
-                            
-                            Spacer()
+                        if selection == 0 {
+                            SearchUsersView()
+                        } else if selection == 1 {
+                            SearchTracksView()
                         }
-                        .padding()
-                        .background(Color(UIColor.secondarySystemBackground))
-                        .clipShape(Capsule())
-                        .padding(.horizontal)
                     }
                 }
                 .scrollDismissesKeyboard(.interactively)
